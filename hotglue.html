@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <title>Redirecting to Hotglue...</title>
     <script>
-        var RedirectToApp = function()
+        var redirectToApp = function()
         {
-            function GetURLParameter(sParam)
+            function getURLParameter(sParam)
             {
                 var sPageURL = window.location.search.substring(1);
                 var sURLVariables = sPageURL.split('&');
@@ -26,13 +26,13 @@
             },
             10000);
 
-            if (GetURLParameter('url') != null)
+            if (getURLParameter('url') != null)
             {
-                window.location.replace('hotglue://add=' + decodeURI(GetURLParameter('url')));
+                window.location.replace('hotglue://add=' + decodeURI(getURLParameter('url')));
             }
         };
 
-        window.onload = RedirectToApp;
+        window.onload = redirectToApp;
     </script>
 </head>
 <body></body>
