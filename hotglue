@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <script>
+        var RedirectToApp = function()
+        {
+            function GetURLParameter(sParam)
+            {
+                var sPageURL = window.location.search.substring(1);
+                var sURLVariables = sPageURL.split('&');
+                for (var i = 0; i < sURLVariables.length; i++) 
+                {
+                    var sParameterName = sURLVariables[i].split('=');
+                    if (sParameterName[0] == sParam) 
+                    {
+                        return sParameterName[1];
+                    }
+                }
+            }
+
+            setTimeout(function appNotInstalled()
+            {
+                window.location.replace("http://www.jujuadams.com/");
+            },
+            100);
+
+            window.location.replace('hotglue://install=' + GetURLParameter('url');
+        };
+
+        window.onload = RedirectToApp;
+    </script>
+</head>
+<body></body>
+</html>
