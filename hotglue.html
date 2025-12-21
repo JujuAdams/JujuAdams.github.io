@@ -22,15 +22,15 @@
 
             setTimeout(function appNotInstalled()
             {
-                window.location.replace("http://www.github.com/jujuadams/hotglue");
+                window.location.assign("http://www.github.com/jujuadams/hotglue");
             },
             10000);
 
             if (getURLParameter('url') != null)
             {
                 alert(getURLParameter('url'));
-                alert(decodeURI(getURLParameter('url')));
-                //window.location.replace('hotglue://add=' + decodeURI(getURLParameter('url')));
+                alert(decodeURIComponent(getURLParameter('url')));
+                //window.location.replace('hotglue://add=' + decodeURIComponent(getURLParameter('url')));
             }
         };
 
