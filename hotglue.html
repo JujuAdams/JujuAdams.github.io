@@ -28,7 +28,7 @@
 
             if (GetURLParameter('url') != null)
             {
-                window.location.replace('hotglue://add=' + GetURLParameter('url'));
+                window.location.replace('hotglue://add=' + decodeURI(GetURLParameter('url')));
             }
         };
 
