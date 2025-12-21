@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Redirecting...</title>
+    <title>Redirecting to Hotglue...</title>
     <script>
         var RedirectToApp = function()
         {
@@ -22,11 +22,14 @@
 
             setTimeout(function appNotInstalled()
             {
-                window.location.replace("http://www.jujuadams.com/");
+                window.location.replace("http://www.github.com/jujuadams/hotglue");
             },
-            100);
+            10000);
 
-            window.location.replace('hotglue://install=' + GetURLParameter('url');
+            if (GetURLParameter('url') != null)
+            {
+                window.location.replace('hotglue://install=' + GetURLParameter('url'));
+            }
         };
 
         window.onload = RedirectToApp;
